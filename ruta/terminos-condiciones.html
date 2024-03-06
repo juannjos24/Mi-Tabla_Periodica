@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/politicas.svg">
+    <title>Términos y condiciones </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&display=swap');
+        .title {
+            font-family: 'Lobster', cursive;
+            font-size: 48px;
+        }
+        
+        .title2 {
+            font-family: 'Acme', sans-serif;
+            font-size: 25px;
+        }
+        
+        .politicas {
+            padding: 10px;
+        }
+        /*Inicio de estilo de carga*/
+        /* Main styles */
+        
+        .contenedor_loader {
+            height: 100%;
+            z-index: 9999;
+            position: fixed;
+            width: 100%;
+            transition: all 1.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(-180deg, #ffcc23, #ffd858);
+        }
+        
+        .texto {
+            animation: fluido 10s ease-in-out infinite;
+            background: linear-gradient(-45deg, #ff4a2a, #f8e00a, #F992FF, #90DFFE);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @keyframes fluido {
+            0% {
+                background-position: 0 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0 50%
+            }
+        }
+        
+        .loader {
+            position: relative;
+        }
+        
+        .loader:after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: rgb(255, 255, 255);
+            animation: girar .5s linear infinite;
+            position: absolute;
+            top: 0;
+            left: -30px;
+            border-radius: 3px;
+            box-shadow: 0 0 3px rgb(0, 0, 0, .5);
+        }
+        
+        .loader:before {
+            content: '';
+            width: 60px;
+            height: 10px;
+            background-color: rgb(0, 0, 0, 4);
+            animation: sombra-animada .5s linear infinite;
+            position: absolute;
+            top: 70px;
+            left: -30px;
+            border-radius: 50%;
+        }
+        
+        @keyframes girar {
+            17% {
+                border-bottom-right-radius: 3px;
+            }
+            25% {
+                transform: translate(9px)rotate(22.5deg);
+            }
+            50% {
+                transform: scale(1, 0.9)translateY(18px)rotate(45deg);
+                border-bottom-right-radius: 40px;
+            }
+            75% {
+                transform: translate(9px)rotate(67.5deg);
+            }
+            100% {
+                transform: translate(9px)rotate(90deg);
+            }
+        }
+        
+        @keyframes sombra-animada {
+            50% {
+                transform: scale(1.3, 1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Pantalla de carga-->
+    <div class="contenedor_loader" id="carga">
+
+        <div class="loader">
+
+        </div>
+    </div>
+    <!-- Contenido-->
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="title text-center title texto">Terminos y Condiciones</h4>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="terminos-condiciones.html">Terminos y Condiciones</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-current="page" href="home.html"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://juan-jose-m-m.github.io/Portafolio/" tabindex="-1" aria-disabled="true">Conoce al creador</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="home.html">Home</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="politicas">
+            <h4 class="title2">1. ¿Cuál es la información que recopilamos?</h4>
+            <ul>
+                <li>
+                    Sea de su conocimiento que los datos que son tomados de su navegador son los siguientes:
+                    <ul>
+                        <li><b>Hora:</b> Esta es proporcionada por su navegador a través de una función y es tratada de manera correcta. Sin ningún uso maligno y es almacenada y usada de forma correcta.</li>
+                        <li><b>Fecha:</b> Esta es proporcionada por su navegador a través de una función y es tratada de manera correcta. Sin ningún uso maligno y es almacenada y usada de forma correcta.</li>
+                        <li><b>Nickname:</b> Este 'apodo' es proporcionado por el usuario final, el cual se recomienda que no sea ningún de los siguientes:</li>
+                        <ul>
+                            <li>Nombres reales.</li>
+                            <li>Nombres de personas de las cuales no se cuente con el derecho de uso, para poder regístralo a través de este y otros sitios web.</li>
+                            <li>Así como el uso de nombres de marcas nacionales e internacionales, ya que dichas marcas pueden no aprobar el uso indebido de su marca y/o nombre jurídico.</li>
+                        </ul>
+                        <li>Es por ello que hacemos hincapié en que el nickname sea creado manera ficticia, que no pueda perjudicar a ninguna persona, así como pudiera perjudicar a marcas personales o empresas del sector público y privado.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4 class="title2">2. ¿Cómo usamos esta información?</h4>
+            <ul>
+                <li>Sea de su conocimiento cuales serán los usos que tendrán los datos, a los cuales tendremos acceso.</li>
+                <ul>
+                    <li><b>Hora: </b> La hora que nos proporciona su navegador será usada para tener un control de las acciones que se pueden realizar dentro de este sitio web, como lo son:</li>
+                    <ul>
+                        <li><b>Botón de likes: </b> La hora será ocupada para saber la hora del día en que el usuario presiono este botón, para después restringirle el uso nuevamente de este botón</li>
+                        <li><b>Comentarios:</b> La hora será ocupada para saber la hora del día en la que el usuario hizo su comentario, para después poderle hacer un resumen de su actividad, como lo es: la hora en la que se efectuó el comentario.</li>
+                    </ul>
+                    <li><b>Fecha: </b> La fecha que nos proporciona su navegador será usada para tener un control de las acciones que se pueden realizar dentro de este sitio web, como lo son:</li>
+                    <ul>
+                        <li><b>Botón de likes:</b> La fecha será ocupada para saber la fecha en la que el usuario presiono este botón, para después restringirle el uso nuevamente de este botón</li>
+                        <li><b>Comentarios: </b> La fecha será ocupada para saber la hora del día en la que el usuario hizo su comentario, para después poderle hacer un resumen de su actividad, como lo es: la fecha en la que se efectuó el comentario.</li>
+                    </ul>
+                    <li><b>Nickname:</b> El nickname que nos proporciona el usuario es de único uso para poder identificar en la base de datos los diferentes usuarios que se registran en la base de datos. Así como tiene la función de servir como un identificador
+                        de usuarios.
+                    </li>
+                </ul>
+            </ul>
+            <h4 class="title2">3. ¿Su información será compartida con alguien?</h4>
+            <ul>
+                <li>Sea de su conocimiento que:</li>
+                <ul>
+                    <li>Los datos mencionados en el apartado número 1, serán compartidos únicamente con las siguientes empresas y/o personas fisicas: </li>
+                    <ul>
+                        <li><b>Firebase:</b> Empresa perteneciente a la gran empresa Google. Y es con el único fin de dar un seguimiento del comportamiento de las personas que ingresan a este sitio web. Toda la información compartida con dicha empresa esta
+                            resguardada de manera segura en cada uno de sus servidores, puede leer también sus términos y condiciones en:
+                            <a href="https://firebase.google.com/support/privacy?hl=es-419">Firebase terminos y condiciones</a>
+                        </li>
+                        <li>Dicha información no puede ser visualizada por ninguna persona a excepción del propio desarrollador de esta página web, por lo cual puede estar seguro que sus datos serán tratados de la manera más discreta posible haciendo un compromiso
+                            el desarrollador de ser lo más discreto posible y tratar esa información de la mejor manera.
+                        </li>
+                    </ul>
+                </ul>
+            </ul>
+            <h4 class="title2">4. ¿Qué pasa si no quiero compartir mi información?</h4>
+            <ul>
+                <li>Es comprensible que no quiera compartir sus datos con páginas que no son de mucha confianza, es por ello que le aconsejamos que si no tiene la disposición de compartir sus datos con este sitio web no lo haga, ya que está en todo su derecho
+                    de no hacerlo, o en dado caso de que quisiera visual el contenido puede hacerlo proporcionando datos que sean incorrectos a los reales.
+                </li>
+            </ul>
+            <h4 class="title2">5. ¿Cómo puede comunicarse con nosotros sobre estos términos y condiciones?.</h4>
+            <ul>
+                <li> Si tiene preguntas o comentarios sobre estos términos y condiciones, puede contactarnos a miprivacidadpage@gmail.com, que estaremos felices de responderle.</li>
+            </ul>
+            <p>Cabe mencionar que existen algunas imágenes y recursos gráficos a los cuales no cuento con el derecho del autor es por ello que declaró que serán usados sin fines de lucro.</p>
+            <p>Muchas gracias por visitar las políticas y privacidad de este sitio web, espero a ver solucionad tus dudas.<b>Recuerda que trataremos de la mejor manera tu privacidad y tu seguridad será nuestra prioridad.</b></p>
+        </div>
+    </div>
+    <script>
+        window.onload = function carga() {
+            var contcarga = document.getElementById('carga');
+            contcarga.style.visibility = 'hidden';
+            contcarga.style.opacity = '0';
+        }
+    </script>
+</body>
+
+</html>

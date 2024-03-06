@@ -1,0 +1,15 @@
+{
+    "name": "tabla_periodica",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "purgecss --css sass/cusom.css --content index.html -o sass/reducido.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^5.0.2"
+    }
+}

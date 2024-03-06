@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="engls">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tabla Periodica</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/reg.svg">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&display=swap');
+        .title {
+            font-family: 'Lobster', cursive;
+            font-size: 60px;
+        }
+        
+        .title2 {
+            font-family: 'Acme', sans-serif;
+        }
+        /*Inicio de estilo de carga*/
+        /* Main styles */
+        
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+        .text {
+            fill: none;
+            stroke-width: 6;
+            stroke-linejoin: round;
+            stroke-dasharray: 70 330;
+            stroke-dashoffset: 0;
+            -webkit-animation: stroke 6s infinite linear;
+            animation: stroke 6s infinite linear;
+        }
+        
+        .text:nth-child(5n+1) {
+            stroke: #F2385A;
+            -webkit-animation-delay: -1.2s;
+            animation-delay: -1.2s;
+        }
+        
+        .text:nth-child(5n+2) {
+            stroke: #e6990a;
+            -webkit-animation-delay: -2.4s;
+            animation-delay: -2.4s;
+        }
+        
+        .text:nth-child(5n+3) {
+            stroke: #fcfff8;
+            -webkit-animation-delay: -3.6s;
+            animation-delay: -3.6s;
+        }
+        
+        .text:nth-child(5n+4) {
+            stroke: #f3f3f3;
+            -webkit-animation-delay: -4.8s;
+            animation-delay: -4.8s;
+        }
+        
+        .text:nth-child(5n+5) {
+            stroke: #f74e6a;
+            -webkit-animation-delay: -6s;
+            animation-delay: -6s;
+        }
+        
+        @-webkit-keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+        
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+        /* Other styles */
+        
+        .containe {
+            height: 100%;
+            background: #212121;
+            background-size: .2em 100%;
+            font: 12.5em/1 Open Sans, Impact;
+            text-transform: uppercase;
+            margin: 0;
+            z-index: 10000;
+            position: fixed;
+            width: 100%;
+        }
+        
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pantalla de carga-->
+    <div class="containe" id="carga">
+        <svg viewBox="0 0 1320 300">
+    
+        <!-- Symbol -->
+        <symbol id="s-text">
+          <text text-anchor="middle"
+                x="50%" y="50%" dy=".35em">
+           Bienvenido
+          </text>
+        </symbol>  
+      
+        <!-- Duplicate symbols -->
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>
+        <use xlink:href="#s-text" class="text"
+             ></use>      
+      </svg>
+    </div>
+
+    <!-- Contenido-->
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-end">
+                    <img src="" alt="" width="">
+                </div>
+                <h2 class="fw-bold text-center pt-5 mb-5 title">Bienvenido</h2>
+                <form id="form">
+                    <div class="mb-6 text-center">
+                        <input type="text" id="username" placeholder="Ingrese un nickname" class="form-control" required="required">
+                    </div>
+                    <div class="d-grid p-5">
+                        <input type="submit" class="btn btn-lg btn-warning btn-block" value="Entrar">
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <div class="alert alert-light d-flex align-items-center" role="alert" id="alert">
+
+                </div>
+            </div>
+        </div>
+        <p class="text-center">Puedes proporcionar un nickname ficticio, y que este dentro de los márgenes establecidos en:
+            <a href="ruta/terminos-condiciones.html">Términos y Condiciones</a>
+        </p>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        window.onload = function carga() {
+            var contcarga = document.getElementById('carga');
+            contcarga.style.visibility = 'hidden';
+            contcarga.style.opacity = '0';
+        }
+    </script>
+</body>
+
+</html>

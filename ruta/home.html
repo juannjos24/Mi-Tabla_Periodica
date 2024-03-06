@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/home.svg">
+    <title>Mi Tabla Periódica </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;500&display=swap');
+        .title {
+            font-family: 'Lobster', cursive;
+            font-size: 60px;
+        }
+        
+        .title2 {
+            font-family: 'Acme', sans-serif;
+            font-size: 30px;
+        }
+        
+        .parrafo {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 19px;
+        }
+        
+        .animado {
+            animation: fluido 20s ease-in-out infinite;
+            background: linear-gradient(-45deg, #f3a861, #f7cb65, #ff4a2a, #f8e00a, #8ae40c, #4e8502, #3feb56, #7c1bfc, #F992FF, #90DFFE, #383838);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @keyframes fluido {
+            0% {
+                background-position: 0 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0 50%
+            }
+        }
+        
+        .btn {
+            min-width: 50px;
+            max-width: 50px;
+            font-size: 20px;
+            font-family: 'Alegreya Sans', sans-serif;
+        }
+        
+        .btn-outline-gnobles {
+            color: #90DFFE;
+            border-color: #90DFFE;
+        }
+        
+        .btn-outline-gnobles:hover {
+            color: #000000;
+            border-color: #90DFFE;
+            background-color: #90DFFE;
+        }
+        
+        .btn-outline-malcalinos {
+            color: #f3a861;
+            border-color: #f3a861;
+        }
+        
+        .btn-outline-malcalinos:hover {
+            color: #000000;
+            border-color: #f3a861;
+            background-color: #f3a861;
+        }
+        
+        .btn-outline-alter {
+            color: #f7cb65;
+            border-color: #f7cb65;
+        }
+        
+        .btn-outline-alter:hover {
+            color: #000000;
+            border-color: #f7cb65;
+            background-color: #f7cb65;
+        }
+        
+        .btn-outline-otmetales {
+            color: #f8e00a;
+            border-color: #f8e00a;
+        }
+        
+        .btn-outline-otmetales:hover {
+            color: #000000;
+            border-color: #f8e00a;
+            background-color: #f8e00a;
+        }
+        
+        .btn-outline-metrasn {
+            color: #ff4a2a;
+            border-color: #ff4a2a;
+        }
+        
+        .btn-outline-metrasn:hover {
+            color: #ffffff;
+            border-color: #ff4a2a;
+            background-color: #ff4a2a;
+        }
+        
+        .btn-outline-halogeno {
+            color: #F992FF;
+            border-color: #F992FF;
+        }
+        
+        .btn-outline-halogeno:hover {
+            color: #000000;
+            border-color: #F992FF;
+            background-color: #F992FF;
+        }
+        
+        .btn-outline-descono {
+            color: #C8C8C8;
+            border-color: #C8C8C8;
+        }
+        
+        .btn-outline-descono:hover {
+            color: #000000;
+            border-color: #383838;
+            background-color: #383838;
+        }
+        
+        .btn-outline-nomet {
+            color: #7c1bfc;
+            border-color: #7c1bfc;
+        }
+        
+        .btn-outline-nomet:hover {
+            color: #e2e2e2;
+            border-color: #7c1bfc;
+            background-color: #7c1bfc;
+        }
+        
+        .btn-outline-melaoide {
+            color: #3feb56;
+            border-color: #3feb56;
+        }
+        
+        .btn-outline-melaoide:hover {
+            color: #e2e2e2;
+            border-color: #3feb56;
+            background-color: #3feb56;
+        }
+        
+        .btn-outline-lactanido {
+            color: #8ae40c;
+            border-color: #8ae40c;
+        }
+        
+        .btn-outline-lactanido:hover {
+            color: #000000;
+            border-color: #8ae40c;
+            background-color: #8ae40c;
+        }
+        
+        .btn-outline-actanido {
+            color: #4e8502;
+            border-color: #4e8502;
+        }
+        
+        .btn-outline-actanido:hover {
+            color: #e2e2e2;
+            border-color: #4e8502;
+            background-color: #4e8502;
+        }
+        
+        .boton {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        }
+        
+        .btn-secondary {
+            color: #fff;
+            background-color: #5c636a;
+            border-color: #565e64;
+        }
+        
+        .btn-outline-primary {
+            color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        
+        .btn-outline-primary:hover {
+            color: #ffffff;
+            border-color: #0d6efd;
+            background-color: #0d6efd;
+        }
+        
+        .btn-outline-primary:disabled,
+        .btn-outline-primary.disabled {
+            color: #ffffff;
+            border-color: #0d6efd;
+            background-color: #0d6efd;
+        }
+        
+        .btn-outline-danger {
+            color: #ff0000ea;
+            border-color: #ff0000ea;
+        }
+        /* Animacion de carga*/
+        
+        .contenedor_loader {
+            height: 100%;
+            z-index: 9999;
+            position: fixed;
+            width: 100%;
+            transition: all 1.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(-180deg, #2d65ff, #92acf3, #7295f3);
+        }
+        
+        .loader {
+            position: relative;
+        }
+        
+        .loader:after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: rgb(255, 255, 255);
+            animation: girar .5s linear infinite;
+            position: absolute;
+            top: 0;
+            left: -30px;
+            border-radius: 3px;
+            box-shadow: 0 0 3px rgb(0, 0, 0, .5);
+        }
+        
+        .loader:before {
+            content: '';
+            width: 60px;
+            height: 10px;
+            background-color: rgb(0, 0, 0, 4);
+            animation: sombra-animada .5s linear infinite;
+            position: absolute;
+            top: 70px;
+            left: -30px;
+            border-radius: 50%;
+        }
+        
+        @keyframes girar {
+            17% {
+                border-bottom-right-radius: 3px;
+            }
+            25% {
+                transform: translate(9px)rotate(22.5deg);
+            }
+            50% {
+                transform: scale(1, 0.9)translateY(18px)rotate(45deg);
+                border-bottom-right-radius: 40px;
+            }
+            75% {
+                transform: translate(9px)rotate(67.5deg);
+            }
+            100% {
+                transform: translate(9px)rotate(90deg);
+            }
+        }
+        
+        @keyframes sombra-animada {
+            50% {
+                transform: scale(1.3, 1);
+            }
+        }
+        
+        .txtalert {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 18px;
+        }
+        
+        .separador {
+            width: 100%;
+            height: 20px;
+        }
+        
+        .form-control:disabled,
+        .form-control[readonly] {
+            background-color: #bbbbbb;
+            opacity: 1;
+            color: #000000;
+            font-size: 16px;
+            font-family: 'Alegreya Sans', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Pantalla de carga-->
+    <div class="contenedor_loader" id="carga">
+
+        <div class="loader">
+
+        </div>
+    </div>
+    <script>
+        window.onload = function carga() {
+            var contcarga = document.getElementById('carga');
+            contcarga.style.visibility = 'hidden';
+            contcarga.style.opacity = '0';
+        }
+    </script>
+    <!-- Contenido-->
+    <div class="container-lg">
+        <!--Ventana emergente -->
+        <!-- Vertically centered modal -->
+        <div class="row">
+            <div class="col-12 p-5">
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <p class="title animado">Mi Tabla Periódica</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Por: <cite title="Source Title">Juan José Moreno</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <figure class="text-center">
+            <blockquote class="blockquote title2">
+                <p>Bienvenido:</p>
+            </blockquote>
+            <figcaption class="blockquote-footer" id="usernav">
+
+            </figcaption>
+        </figure>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://juan-jose-m-m.github.io/Portafolio/" tabindex="-1" aria-disabled="true">Conoce al creador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="terminos-condiciones.html">Términos y Condiciones</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-lg-12 p-4">
+                <p class="parrafo">En esta página web podrás conocer de la mejor manera la tabla periódica y cada uno de sus elementos químicos que la componen. Cabe mencionar, que algunos de los valores que se muestran en los elementos no sean los correctos, por ello te
+                    sugiero que está tabla periódica no sea usada con fines académicos.</p>
+            </div>
+            <div class="col-lg-12 p-4">
+                <p class="text-center title2"><strong>Instrucciones:</strong></p>
+                <p>
+                    <ul>
+                        <li class="parrafo"><strong>Primer Paso:</strong> Sí, estás viendo el contenido desde un dispositivo móvil (tableta, celular, ipad, etc.) te sugiero que coloques el dispositivo en posición horizontal para tener una mejor experiencia.</li>
+                    </ul>
+                    <ul>
+                        <li class="parrafo"><strong>Segundo Paso:</strong> Dentro de la tabla periódica puedes moverte de derecha a izquierda. Esto para poder ver todos los elementos que la componen.</li>
+                    </ul>
+                    <ul>
+                        <li class="parrafo"><strong>Tercer Paso:</strong> Cuando quieras conocer un elemento, puedes hacer clic en el elemento y se abrirá una nueva ventana con toda la información sobre este elemento.</li>
+                    </ul>
+                    <ul>
+                        <li class="parrafo"><strong>Cuarto Paso:</strong> En la parte final de esta sección encontrará la simbología de colores con la que se representan los elementos químicos.</li>
+                    </ul>
+                    <ul>
+                        <li class="parrafo"><strong>Quinto Paso:</strong> Puedes seguir explorando la página web, para conocer los elementos químicos. Puedes hacerle saber al desarrollador que te gustó su trabajo dejando un 'Me gusta' al final de la página. También puedes
+                            dejar un comentario.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-lg-12 p-5">
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <p class="title2">¡Disfruta tu estancia!</p>
+                    </blockquote>
+                </figure>
+            </div>
+        </div>
+
+        <!--Tabla responsive-->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header" id="namelement">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalbody">
+
+                    </div>
+                    <div class="modal-body" id="modalbod-cont">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="boton btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">1A</th>
+                        <th scope="col">2A</th>
+                        <th scope="col">1B</th>
+                        <th scope="col">2B</th>
+                        <th scope="col">3B</th>
+                        <th scope="col">4B</th>
+                        <th scope="col">5B</th>
+                        <th scope="col">6B</th>
+                        <th scope="col">7B</th>
+                        <th scope="col">8B</th>
+                        <th scope="col">9B</th>
+                        <th scope="col">10B</th>
+                        <th scope="col">3A</th>
+                        <th scope="col">4A</th>
+                        <th scope="col">5A</th>
+                        <th scope="col">6A</th>
+                        <th scope="col">7A</th>
+                        <th scope="col">8A</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">1</th>
+                        <td scope="col"><input type="button" value="H" class="btn btn-outline-gnobles" id="1" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="He" class="btn btn-outline-gnobles" id="2" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">2</th>
+                        <td scope="col"><input type="button" name="Enviar" value="Li" class="btn btn-outline-malcalinos" id="3" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Be" class="btn btn-outline-alter" id="4" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="B" class="btn btn-outline-melaoide" id="5" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="C" class="btn btn-outline-nomet" id="6" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="N" class="btn btn-outline-nomet" id="7" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="O" class="btn btn-outline-nomet" id="8" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="F" class="btn btn-outline-halogeno" id="9" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ne" class="btn btn-outline-gnobles" id="10" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">3</th>
+                        <td scope="col"><input type="button" name="Enviar" value="Na" class="btn btn-outline-malcalinos" id="11" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Mg" class="btn btn-outline-alter" id="12" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Al" class="btn btn-outline-metrasn " id="13" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Si" class="btn btn-outline-melaoide" id="14" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="P" class="btn btn-outline-nomet" id="15" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="S" class="btn btn-outline-nomet" id="16" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Cl" class="btn btn-outline-halogeno" id="17" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ar" class="btn btn-outline-gnobles" id="18" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">4</th>
+                        <td scope="col"><input type="button" name="Enviar" value="K" class="btn btn-outline-malcalinos" id="19" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ca" class="btn btn-outline-alter" id="20" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Sc" class="btn btn-outline-otmetales" id="21" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ti" class="btn btn-outline-otmetales" id="22" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="V" class="btn btn-outline-otmetales" id="23" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Cr" class="btn btn-outline-otmetales" id="24" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Mn" class="btn btn-outline-otmetales" id="25" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Fe" class="btn btn-outline-otmetales" id="26" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Co" class="btn btn-outline-otmetales" id="27" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ni" class="btn btn-outline-otmetales" id="28" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Cu" class="btn btn-outline-otmetales" id="29" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Zn" class="btn btn-outline-otmetales" id="30" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ga" class="btn btn-outline-metrasn " id="31" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ge" class="btn btn-outline-melaoide" id="32" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="As" class="btn btn-outline-melaoide" id="33" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Se" class="btn btn-outline-nomet" id="34" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Br" class="btn btn-outline-halogeno" id="35" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Kr" class="btn btn-outline-gnobles" id="36" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">5</th>
+                        <td scope="col"><input type="button" name="Enviar" value="Rb" class="btn  btn-outline-malcalinos" id="37" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Sr" class="btn  btn-outline-alter" id="38" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Y" class="btn btn-outline-otmetales" id="39" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Zr" class="btn  btn-outline-otmetales" id="40" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Nb" class="btn  btn-outline-otmetales" id="41" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Mo" class="btn  btn-outline-otmetales" id="42" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Tc" class="btn  btn-outline-otmetales" id="43" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ru" class="btn  btn-outline-otmetales" id="44" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Rh" class="btn  btn-outline-otmetales" id="45" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Pd" class="btn  btn-outline-otmetales" id="46" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ag" class="btn  btn-outline-otmetales" id="47" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Cd" class="btn  btn-outline-otmetales" id="48" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="In" class="btn btn-outline-metrasn" id="49" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Sn" class="btn btn-outline-metrasn" id="50" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Sb" class="btn btn-outline-melaoide" id="51" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Te" class="btn btn-outline-melaoide" id="52" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="I" class="btn btn-outline-halogeno" id="53" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Xe" class="btn btn-outline-gnobles" id="54" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">6</th>
+                        <td scope="col"><input type="button" name="Enviar" value="Cs" class="btn  btn-outline-malcalinos" id="55" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ba" class="btn  btn-outline-alter" id="56" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Lu" class="btn  btn-outline-otmetales" id="71" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Hf" class="btn  btn-outline-otmetales" id="72" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ta" class="btn  btn-outline-otmetales" id="73" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="W" class="btn  btn-outline-otmetales" id="74" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Re" class="btn  btn-outline-otmetales" id="75" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Os" class="btn  btn-outline-otmetales" id="76" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ir" class="btn  btn-outline-otmetales" id="77" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Pt" class="btn  btn-outline-otmetales" id="78" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Au" class="btn  btn-outline-otmetales" id="79" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Hg" class="btn  btn-outline-otmetales" id="80" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Tl" class="btn btn-outline-metrasn" id="81" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Pb" class="btn btn-outline-metrasn" id="82" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Bi" class="btn btn-outline-metrasn" id="83" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Po" class="btn btn-outline-melaoide" id="84" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="At" class="btn btn-outline-halogeno" id="85" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Rn" class="btn btn-outline-gnobles" id="86" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">7</th>
+                        <td scope="col"><input type="button" name="Enviar" value="Fr" class="btn  btn-outline-malcalinos" id="87" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ra" class="btn  btn-outline-alter" id="88" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Lr" class="btn  btn-outline-otmetales" id="103" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Rf" class="btn  btn-outline-otmetales" id="104" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Db" class="btn  btn-outline-otmetales" id="105" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Sg" class="btn  btn-outline-otmetales" id="106" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Bh" class="btn  btn-outline-otmetales" id="107" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Hs" class="btn  btn-outline-otmetales" id="108" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Mt" class="btn  btn-outline-otmetales" id="109" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ds" class="btn  btn-outline-otmetales" id="110" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Rg" class="btn  btn-outline-otmetales" id="111" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Cn" class="btn  btn-outline-otmetales" id="112" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Nh" class="btn  btn-outline-descono" id="113" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Fl" class="btn  btn-outline-descono" id="114" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Mc" class="btn  btn-outline-descono" id="115" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Lv" class="btn  btn-outline-descono" id="116" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ts" class="btn  btn-outline-descono" id="117" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Og" class="btn  btn-outline-descono" id="118" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="La" class="btn btn-outline-lactanido" id="57" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ce" class="btn btn-outline-lactanido" id="58" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Pr" class="btn btn-outline-lactanido" id="59" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Nd" class="btn btn-outline-lactanido" id="60" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Pm" class="btn btn-outline-lactanido" id="61" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Sm" class="btn btn-outline-lactanido" id="62" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Eu" class="btn btn-outline-lactanido" id="63" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Gd" class="btn btn-outline-lactanido" id="64" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Tb" class="btn btn-outline-lactanido" id="65" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Dy" class="btn btn-outline-lactanido" id="66" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ho" class="btn btn-outline-lactanido" id="67" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Er" class="btn btn-outline-lactanido" id="68" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Tm" class="btn btn-outline-lactanido" id="69" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Yb" class="btn btn-outline-lactanido" id="70" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Ac" class="btn btn-outline-actanido" id="89" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Th" class="btn btn-outline-actanido" id="90" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Pa" class="btn btn-outline-actanido" id="91" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="U" class="btn btn-outline-actanido" id="92" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Np" class="btn btn-outline-actanido" id="93" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Pu" class="btn btn-outline-actanido" id="94" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Am" class="btn btn-outline-actanido" id="95" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Cm" class="btn btn-outline-actanido" id="96" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Bk" class="btn btn-outline-actanido" id="97" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Cf" class="btn btn-outline-actanido" id="98" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Es" class="btn btn-outline-actanido" id="99" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Fm" class="btn btn-outline-actanido" id="100" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="Md" class="btn btn-outline-actanido" id="101" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"><input type="button" name="Enviar" value="No" class="btn btn-outline-actanido" id="102" onclick="check_element(this)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!--Simbologia-->
+        <div class="table-responsive">
+            <h1 class="text-center title2">Simbologia</h1>
+            <table class="table table-borderless">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Color</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Metales Alcalinos</th>
+                        <td><input type="color" value="#f3a861"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Alcalinotérreos</th>
+                        <td><input type="color" value="#f7cb65"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Otros Metales</th>
+                        <td><input type="color" value="#ff4a2a"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Metales De Transición</th>
+                        <td><input type="color" value="#f8e00a"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Lantánidos</th>
+                        <td><input type="color" value="#8ae40c"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Actínidos</th>
+                        <td><input type="color" value="#4e8502"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Metaloides</th>
+                        <td><input type="color" value="#3feb56"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>No Metales</th>
+                        <td><input type="color" value="#7c1bfc"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Halógenos</th>
+                        <td><input type="color" value="#F992FF"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Gases Nobles</th>
+                        <td><input type="color" value="#90DFFE"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Elementos Desconocidos</th>
+                        <td><input type="color" value="#383838"></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!-- tu espacio-->
+        <div class="card text-center">
+            <div class="card-header title2">
+                Tu espacio
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Deja tu poderoso me gusta</h5>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="boton btn-outline-primary" type="button" onclick="disablelike()" id="btnlike"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04
+                                7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z "/>
+</svg> Me gusta </button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="alert alert-light d-flex align-items-center" role="alert" id="alert">
+
+                </div>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="txtmensaje" rows="3" maxlength="70" required placeholder="Escribe tu opinión y presiona el botón de enviar. Recuerda no enviar un comentario vacío :) "></textarea>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto ">
+                    <button class="boton btn-outline-danger" type="button" id="btnmen" onclick="mensaje()"><svg xmlns="http://www.w3.org/2000/svg " width="16 " height="16 " fill="currentColor " class="bi bi-envelope " viewBox="0 0 16 16 ">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1
+                                0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z "/>
+</svg> Enviar</button>
+                </div>
+            </form>
+            <div class="separador"></div>
+            <div class="col">
+                <div class="alert alert-light d-flex align-items-center" role="alert" id="alertmen">
+
+                </div>
+                <div class="alert alert-light d-flex align-items-center" role="alert" id="alertmen2">
+
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="card-header ">
+                    ¡Gracias!
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCEBsvHElqQqn0AGoqTrtpjb9_DLlv2dD4",
+            authDomain: "control-lik-fb.firebaseapp.com",
+            projectId: "control-lik-fb",
+            storageBucket: "control-lik-fb.appspot.com",
+            messagingSenderId: "520556160806",
+            appId: "1:520556160806:web:d6e789384104a9a116c3e7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="../js/functions.js"></script>
+    <script src="../js/table.js"></script>
+
+</body>
+
+</html>
